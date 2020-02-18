@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=titile%></title>
+</head>
+<body>
+    <form action="/createTask" method="POST">
+        <input type="text" name="description" placeholder="Task Description" required>
+        <select name="category" required>
+            <option value="School">School</option>
+            <option value="work">Work</option>
+            <option value="fitness">Fitness</option>
+            <option value="lifestyle">Lifestyle</option>
+        </select>
+        <input type="date" name="date" required>
+        <button type="submit">Add Task</button>
+    </form>
+</body>
+</html>
