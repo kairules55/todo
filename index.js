@@ -7,8 +7,8 @@ const app = express();
 
 //Middleware
 app.use(express.urlencoded());
-app.use('/',require('./routes'));
 app.use(express.static('assets'));
+app.use('/',require('./routes'));
 
 
 

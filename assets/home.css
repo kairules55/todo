@@ -1,0 +1,51 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: aqua;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+}
+
+.my-container {
+  height: 80vh;
+  background-color: aquamarine;
+}
+
+/*Form*/
+#desc {
+  width: 100%;
+}
+
+#submitButton {
+  margin-top: 10px;
+  height: 50px;
+}
+
+#form {
+  padding: 40px;
+}
+
+/*TaskView*/
+#taskview {
+  padding: 40px;
+}
+
+#category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: greenyellow;
+}
+
+#description {
+  background-color: azure;
+}
+
+#delete {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: red;
+}
