@@ -26,9 +26,9 @@
           />
           <select class="col-md-3 col-sm-6" name="category" required>
             <option value="School">School</option>
-            <option value="work">Work</option>
-            <option value="fitness">Fitness</option>
-            <option value="lifestyle">Lifestyle</option>
+            <option value="Work">Work</option>
+            <option value="Fitness">Fitness</option>
+            <option value="Lifestyle">Lifestyle</option>
           </select>
           <input class="col-md-3 col-sm-6" type="date" name="date" required />
         </div>
@@ -36,24 +36,20 @@
           <button class="col" id="submitButton" type="submit">Add Task</button>
         </div>
       </form>
-      <div class="row" id="taskview">
-        <div class="col-sm-1" id="category">
-          Work
+      <div id="taskview">
+        <% for(let task of tasks) {%>
+        <div class="row">
+          <div class="col-sm-1" id="category">
+            <%= task.category %>
+          </div>
+          <div class="col-sm-10" id="description">
+            <%= task.description %>
+          </div>
+          <div class="col-sm-1" id="delete">
+            <a href="/deleteTask/?id=<%= task.id%>">Delete</a>
+          </div>
         </div>
-        <div class="col-sm-10" id="description">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
-        </div>
-        <div class="col-sm-1" id="delete">
-          Delete
-        </div>
+        <%}%>
       </div>
     </div>
   </body>
