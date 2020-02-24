@@ -7,10 +7,7 @@ class HomeController {
         console.log("Error in fetching contacts");
         return;
       }
-      response.render("home", {
-        title: "ToDo",
-        tasks: tasks
-      });
+      response.json(tasks);
     });
   }
 
